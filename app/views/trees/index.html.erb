@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Discover our trees</h1>
+  <ul class="list">
+  <% @trees.each do |tree| %>
+    <li class="list-group-item">
+      <div class="cards">
+        <%= link_to tree.name, tree_path(tree) %>
+      </div>
+    </li>
+  <% end %>
+  </ul>
+</div>
