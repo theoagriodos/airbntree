@@ -8,6 +8,8 @@
     <p> <%= @tree.localisation %> </p>
   </div>
 
-  <div class="btn-reservation"> </div>
-</div>
+  <div class="btn-reservation">
+    <%= link_to 'Add a booking', new_tree_booking_path(@tree)%>
+  </div>
 
+</div>

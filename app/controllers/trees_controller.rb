@@ -20,6 +20,22 @@ class TreesController < ApplicationController
     end
   end
 
+  def edit
+    @tree = Tree.find(params[:id])
+  end
+
+  def update
+    @tree = Tree.find(params[:id])
+    @tree.update(tree_params)
+    redirect_to tree_path(@tree)
+  end
+
+  def destroy
+    @tree = Tree.find(params[:id])
+    @tree.destroy
+    redirect_to trees_path
+  end
+
   private
 
   def tree_params
