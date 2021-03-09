@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Add a reservation</h1>
+    <%= simple_form_for [@tree, @booking] do |f| %>
+      <%= f.input :date %>
+      <%= f.submit class: 'btn btn-primary' %>
+    <% end %>
+</div>
