@@ -11,3 +11,13 @@
   <div class="btn-reservation"> </div>
 </div>
 
+<div class="container">
+  <%= link_to 'Edit', edit_tree_path(@tree) %>
+</div>
+
+<div class="container">
+  <%= link_to "Delete #{@tree.name}",
+            tree_path(@tree),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+</div>
