@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action :set_booking, only: [:edit, :update, :destroy]
 
   def new
     @tree = Tree.find(params[:tree_id])
@@ -6,12 +7,15 @@ class BookingsController < ApplicationController
   end
 
   def create
-    raise
-    @booking = booking.find(booking_params)
+    @booking = Booking.new(booking_params)
+    @tree = Tree.find(params[:tree_id])
+    @booking.tree_id = @tree.id
+    @booking.user = current_user
+    @booking.status = "pending"
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to root_path(current_user)
     else
-      render "new"
+      render :new
     end
   end
 
@@ -30,11 +34,11 @@ class BookingsController < ApplicationController
 
 private
 
-  # def set_booking
-  #   @booking = Booking.find(params[:id])
-  # end
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
 
   def booking_params
-    params.require(:booking).permit(:date, :status)
+    params.require(:booking).permit(:booked_at, :status)
   end
 end

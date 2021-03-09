@@ -5,12 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Tree.destroy_all
+Booking.destroy_all
 User.destroy_all
+
 
 theo = User.create!(
   username: "theo",
   email: 'test@test.fr',
+  password: 'azerty'
+  )
+
+benjamin = User.create!(
+  username: "benjamin",
+  email: 'test1@test.fr',
   password: 'azerty'
   )
 
@@ -21,11 +28,11 @@ Tree.create!(
   localisation: "Afrique",
   description: "blablabla",
   price: "70€",
-  user: theo
+  user: benjamin
   )
 
 
-Tree.create!(
+sequoia = Tree.create!(
   name: "Sequoia",
   localisation: "USA",
   description: "blablabla",
@@ -33,4 +40,11 @@ Tree.create!(
   user: theo
   )
 
- puts "#{Tree.count}"
+
+Booking.create!(
+  booked_at: "2021-10-10",
+  user: theo,
+  tree: sequoia
+  )
+
+ puts "#{Booking.count}"
