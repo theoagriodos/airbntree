@@ -1,6 +1,6 @@
 <div class="container">
   <h1><%= @tree.name %></h1>
-    <%= link_to "Back to all trees", trees_path %>
+    <%= link_to "Retour à notre sélection", trees_path %>
 
   <div class="product">
     <p> <%= @tree.description %> </p>
@@ -9,7 +9,7 @@
   </div>
 
   <div class="btn-reservation">
-    <%= link_to 'Add a booking', new_tree_booking_path(@tree)%>
+    <%= link_to 'Réserver cet arbre', new_tree_booking_path(@tree)%>
   </div>
 
 </div>
