@@ -1,10 +1,12 @@
 <div class="banner" style="background-image: url('https://source.unsplash.com/eyfMgGvo9PA/1600x900');">
   <div class="container">
-    <h1>Book a tree !</h1>
+    <h1>Louez un arbre!</h1>
   </div>
 </div>
-<div class="container m-4">
-  <h2>Discover our trees</h2>
+<div class="container m-5 pl-5">
+  <div>
+    <h2>Découvrez nos arbres</h2>
+  </div>
 </div>
 
 <div class="container d-flex justify-content-between">
@@ -24,17 +26,19 @@
 <% end %>
 </div>
 
-<div class="container d-flex justify-content-center mt-3">
+<div class="container d-flex justify-content-center mt-5">
   <%= link_to "Discover more", trees_path, class: "btn-ghost"%>
 </div>
 
-<div class="container m-4">
-  <h2>Join the tree club !</h2>
+<div class="container m-5 pl-5">
+  <div>
+    <h2>Rejoignez-nous !</h2>
+  </div>
 </div>
 
 <div class="container d-flex justify-content-center">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://source.unsplash.com/vGjGvtSfys4/1600x900)">
-    <%= link_to "Add a tree", new_tree_path, class: "btn-light" %>
+    <%= link_to "Ajouter un arbre", new_tree_path, class: "btn-light" %>
   </div>
 </div>
 
