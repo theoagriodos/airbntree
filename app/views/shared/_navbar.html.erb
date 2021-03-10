@@ -11,7 +11,7 @@
               <% if user_signed_in? %>
               <%= link_to "My account", user_path(current_user), class: "dropdown-item" %>
                 <% end %>
-              <%= link_to "Trees", trees_path, class: "dropdown-item" %>
+              <%= link_to "Nos Arbres", trees_path, class: "dropdown-item" %>
               <%= link_to "Home", root_path, class: "dropdown-item" %>
             </div>
           </li>
@@ -19,9 +19,9 @@
       </div>
       <div class="d-flex text-right">
         <% if user_signed_in? %>
-        <%= link_to "logout", destroy_user_session_path, method: :delete, class: "btn-ghost" %>
+        <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "btn-ghost" %>
         <% else %>
-        <%= link_to "Login", new_user_session_path, class: "btn-ghost" %>
+        <%= link_to "Se connecter", new_user_session_path, class: "btn-ghost" %>
         <% end %>
       </div>
  </div>
