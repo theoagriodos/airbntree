@@ -10,57 +10,62 @@
     <div>
       <%# si je clique sur tree je vois tous les arbres du proprio%>
       <div class="trees-of-user">
-        <div class="card-product">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-          <div class="card-tree-infos">
-            <h2> <%= @tree.name %></h2>
-            <p> <%= @tree.localisation %> </p>
-            <p> <%= @tree.description %> </p>
-            <p> <%= @tree.price %> </p>
-            <p> <%= @booking.status %> </p>
-            <div class="link-to-tree">
-              <%= link_to "Editer", edit_tree_path(@tree) %>
-              <%= link_to "Suprimer", tree_path(@tree),
-              method: :delete,
-              data: { confirm: "Etes vous sûr ?" } %> %>
+        <% @my_trees.each do |tree| %>
+          <div class="card-product">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <div class="card-tree-infos">
+              <h2> <%= tree.name %></h2>
+              <p> <%= tree.localisation %> </p>
+              <p> <%= tree.description %> </p>
+              <p> <%= tree.price %> </p>
+              <p> <%#= @booking.status %> </p>
+              <div class="link-to-tree">
+                <%= link_to "Editer", edit_tree_path(tree) %>
+                <%= link_to "Suprimer", tree_path(tree),
+                method: :delete,
+                data: { confirm: "Etes vous sûr ?" } %> %>
+              </div>
             </div>
           </div>
-        </div>
+
+        <% end %>
       </div>
 
       <%# si je clique sur tree je vois tous les arbres du proprio%>
       <div class="bookings-of-user">
+        <% @my_trees.each do |tree| %>
         <div class="card-product">
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
           <div class="card-booking-infos">
-            <h2> <%= @tree.name %></h2>
-            <p> <%= @tree.localisation %> </p>
-            <p> <%= @tree.price %> </p>
-            <p> <%= @booking.status %> </p>
-            <p> <%= @booking.booked_at %> </p>
+            <h2> <%= tree.name %></h2>
+            <p> <%= tree.localisation %> </p>
+            <p> <%= tree.price %> </p>
+            <p> <%#= @booking.status %> </p>
+            <p> <%#= @booking.booked_at %> </p>
             <div class="link-to-booking">
-              <%= link_to "Editer", edit_booking_path(@booking) %>
-              <%= link_to "Suprimer", booking_path(@booking),
+              <%#= link_to "Editer", edit_booking_path(@booking) %>
+              <%#= link_to "Suprimer", booking_path(@booking),
               method: :delete,
               data: { confirm: "Etes vous sûr ?" } %>
             </div>
           </div>
         </div>
       </div>
+      <% end %>
 
   </div>
 
   <div class="user-side">
     <div>
       <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-      <h2> <%= @user.username %> </h2>
+      <h2> <%= current_user.username %> </h2>
     </div>
     <div class="card-user-infos">
       <p> <%= current_user.email %> </p>
 
       <div class="link-to-user">
-        <%= link_to "Editer", edit_registration_path(@user) %>
-        <%= link_to "Supprimer mon compte", destroy_user_session_path(@user) %>
+        <%= link_to "Editer", edit_registration_path(current_user) %>
+        <%= link_to "Supprimer mon compte", destroy_user_session_path(current_user) %>
       </div>
     </div>
   </div>
