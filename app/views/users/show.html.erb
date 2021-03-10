@@ -19,10 +19,10 @@
             <p> <%= @tree.price %> </p>
             <p> <%= @booking.status %> </p>
             <div class="link-to-tree">
-              <%= link_to "Edit", edit_tree_path(@tree) %>
-              <%= link_to "Delete", tree_path(@tree),
+              <%= link_to "Editer", edit_tree_path(@tree) %>
+              <%= link_to "Suprimer", tree_path(@tree),
               method: :delete,
-              data: { confirm: "Are you sure?" } %> %>
+              data: { confirm: "Etes vous sûr ?" } %> %>
             </div>
           </div>
         </div>
@@ -39,10 +39,10 @@
             <p> <%= @booking.status %> </p>
             <p> <%= @booking.booked_at %> </p>
             <div class="link-to-booking">
-              <%= link_to "Edit", edit_booking_path(@booking) %>
-              <%= link_to "Delete", booking_path(@booking),
+              <%= link_to "Editer", edit_booking_path(@booking) %>
+              <%= link_to "Suprimer", booking_path(@booking),
               method: :delete,
-              data: { confirm: "Are you sure?" } %>
+              data: { confirm: "Etes vous sûr ?" } %>
             </div>
           </div>
         </div>
@@ -59,10 +59,10 @@
       <p> <%= current_user.email %> </p>
 
       <div class="link-to-user">
-        <%= link_to "Edit", edit_registration_path(@user) %>
-        <%= link_to "Delete my account", destroy_user_session_path(@user) %>
+        <%= link_to "Editer", edit_registration_path(@user) %>
+        <%= link_to "Supprimer mon compte", destroy_user_session_path(@user) %>
       </div>
     </div>
   </div>
-
+</div>
 </div>
