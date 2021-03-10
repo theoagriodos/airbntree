@@ -1,7 +1,8 @@
 <div class="container">
-  <h1>Add a reservation</h1>
+  <h2>Ajouter une réservation</h2>
     <%= simple_form_for [@tree, @booking] do |f| %>
-      <%= f.input :booked_at %>
+      <%= f.input :booked_at, label: "Du"%>
+      <%= f.input :booked_at, label: "Au"%>
       <%= f.submit class: 'btn btn-primary' %>
     <% end %>
 </div>

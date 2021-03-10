@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @tree = Tree.find(params[:tree_id])
     @booking.tree_id = @tree.id
     @booking.user = current_user
-    @booking.status = "pending"
+    @booking.status = "En attente"
     if @booking.save
       redirect_to root_path(current_user)
     else
