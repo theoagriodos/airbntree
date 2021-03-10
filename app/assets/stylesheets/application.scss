@@ -20,5 +20,12 @@
 @import "components/navbar";
 @import "components/_container";
 
+a:hover {
+  text-decoration: none;
+}
+
+.card-trip-infos {
+  color: #6c757d;
+}
 
 
