@@ -39,7 +39,6 @@ Tree.create!(
   user: benjamin
   )
 
-
 sequoia = Tree.create!(
   name: "Sequoia",
   localisation: "USA",
@@ -47,8 +46,6 @@ sequoia = Tree.create!(
   price: "60€",
   user: theo
   )
-
-
 
 Booking.create!(
   booked_at: "2021-10-10",
