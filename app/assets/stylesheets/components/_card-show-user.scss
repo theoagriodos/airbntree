@@ -1,0 +1,23 @@
+.card-show-user {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // display: flex;
+  align-items: center;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.avatar-user-show {
+  text-align: center;
+  padding: 40px;
+}
+
+.card-user-infos {
+  margin-left: 40px;
+}
+
+.link-to-user {
+  position: absolute;
+  top: 40px; right: 40px;
+}
