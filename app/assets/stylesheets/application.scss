@@ -11,3 +11,21 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/alert";
+@import "components/avatar";
+@import "components/banner";
+@import "components/_big_card";
+@import "components/button";
+@import "components/_card_trip";
+@import "components/navbar";
+@import "components/_container";
+
+a:hover {
+  text-decoration: none;
+}
+
+.card-trip-infos {
+  color: #6c757d;
+}
+
+
