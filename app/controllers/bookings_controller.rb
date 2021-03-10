@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:edit, :update, :destroy, :show]
+  before_action :set_booking, only: [:edit, :update, :destroy]
 
   def new
     @tree = Tree.find(params[:tree_id])
