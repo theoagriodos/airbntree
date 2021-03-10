@@ -1,15 +1,17 @@
+<body class="background">
 <div class="container" id="booking">
   <div class="big-card">
-    <h2>Récapitulatif</h2>
-    <div class="booking-text">
-      <p>Vous avez bientôt terminé ! Cet arbre n'attend plus que vous.</p>
-        <% @my_trees.each do |tree| %>
-        <h3> <%= tree.name %></h3>
-          <p> <%= tree.localisation %> </p>
-          <p> <%= tree.description %> </p>
-          <p> <%= tree.price %> </p>
-        <% end %>
-      </div>
-    <%= link_to "Valider", root_path(current_user), class: 'btn-submit' %>
-  </div>
+      <h2>Récapitulatif</h2>
+        <div class="booking-text">
+          <p>Vous avez bientôt terminé ! Cet arbre n'attend plus que vous.</p>
+            <% @my_trees.each do |tree| %>
+            <h3> <%= tree.name %></h3>
+            <p> <%= tree.localisation %> </p>
+            <p> <%= tree.description %> </p>
+            <p> <%= tree.price %> </p>
+          <% end %>
+        </div>
+      <%= link_to "Valider", root_path(current_user), class: 'btn-submit' %>
+    </div>
 </div>
+</body>
