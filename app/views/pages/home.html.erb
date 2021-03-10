@@ -4,8 +4,34 @@
   </div>
 </div>
 <div class="container m-4">
-  <%= link_to "Discover our trees", trees_path, class: "btn btn-primary"%>
+  <h2>Discover our trees</h2>
 </div>
-<div class="container">
 
+<div class="container d-flex">
+
+<% @trees.each do |tree| %>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://source.unsplash.com/yPSbirjJWzs/1600x900" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text"><%= @tree.description %></p>
+    </div>
+  </div>
+
+<% end %>
+
+  <!-- <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://source.unsplash.com/tQdZiShnvp8/1600x900" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://source.unsplash.com/Siuwr3uCir0/1600x900" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div> -->
 </div>
+
+  <%= link_to "Discover our trees", trees_path, class: "btn btn-primary"%>
