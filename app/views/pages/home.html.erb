@@ -3,45 +3,43 @@
     <h1>Louez un arbre!</h1>
   </div>
 </div>
-<div class="container m-5 pl-5">
+
+<div class="container mt-5">
   <div>
     <h2>Découvrez nos arbres</h2>
   </div>
-</div>
-
-<div class="container d-flex justify-content-between">
-
-<% @trees.each do |tree| %>
-  <div class="card-trip">
-  <img src="https://source.unsplash.com//yPSbirjJWzs/1600x900" />
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= tree.name %></h2>
-      <p><%= tree.description %></p>
-    </div>
-    <h2 class="card-trip-pricing"><%= tree.price %></h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  <div class="d-flex justify-content-between mt-5">
+    <% @trees.each do |tree| %>
+      <%= link_to tree_path(tree) do %>
+        <div class="card-trip">
+        <img src="https://source.unsplash.com//yPSbirjJWzs/1600x900" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= tree.name %></h2>
+            <p><%= tree.description %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= tree.price %></h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
-<% end %>
-</div>
-
 <div class="container d-flex justify-content-center mt-5">
   <%= link_to "Discover more", trees_path, class: "btn-ghost"%>
 </div>
 
-<div class="container m-5 pl-5">
+<div class="container mt-5">
   <div>
     <h2>Rejoignez-nous !</h2>
   </div>
-</div>
-
-<div class="container d-flex justify-content-center">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://source.unsplash.com/vGjGvtSfys4/1600x900)">
-    <%= link_to "Ajouter un arbre", new_tree_path, class: "btn-light" %>
+  <div class="d-flex justify-content-between mt-5">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://source.unsplash.com/vGjGvtSfys4/1600x900)">
+      <%= link_to "Ajouter un arbre", new_tree_path, class: "btn-light" %>
+    </div>
   </div>
 </div>
-
 
 <div class="footer">
   <div class="footer-links">
