@@ -7,31 +7,23 @@
   <h2>Discover our trees</h2>
 </div>
 
-<div class="container d-flex">
+<div class="container d-flex justify-content-between">
 
 <% @trees.each do |tree| %>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://source.unsplash.com/yPSbirjJWzs/1600x900" alt="Card image cap">
-    <div class="card-body">
-      <p class="card-text"><%= @tree.description %></p>
+  <div class="card-trip">
+  <img src="https://source.unsplash.com//yPSbirjJWzs/1600x900" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= tree.name %></h2>
+      <p><%= tree.description %></p>
     </div>
+    <h2 class="card-trip-pricing"><%= tree.price %></h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
-
+</div>
 <% end %>
-
-  <!-- <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://source.unsplash.com/tQdZiShnvp8/1600x900" alt="Card image cap">
-    <div class="card-body">
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-  </div>
-
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://source.unsplash.com/Siuwr3uCir0/1600x900" alt="Card image cap">
-    <div class="card-body">
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-  </div> -->
 </div>
 
-  <%= link_to "Discover our trees", trees_path, class: "btn btn-primary"%>
+<div class="container d-flex justify-content-center mt-3">
+  <%= link_to "Discover more", trees_path, class: "btn-ghost"%>
+</div>

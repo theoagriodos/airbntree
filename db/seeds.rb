@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Booking.destroy_all
 User.destroy_all
-
+Tree.destroy_all
 
 theo = User.create!(
   username: "theo",
@@ -31,14 +31,23 @@ Tree.create!(
   user: benjamin
   )
 
+Tree.create!(
+  name: "Sapin",
+  localisation: "France",
+  description: "Moins présent que l'épicéa",
+  price: "50€",
+  user: benjamin
+  )
+
 
 sequoia = Tree.create!(
   name: "Sequoia",
   localisation: "USA",
-  description: "blablabla",
+  description: "arbre géant d'Amérique du Nord",
   price: "60€",
   user: theo
   )
+
 
 
 Booking.create!(
@@ -48,3 +57,4 @@ Booking.create!(
   )
 
  puts "#{Booking.count}"
+ puts "#{Tree.count}"
