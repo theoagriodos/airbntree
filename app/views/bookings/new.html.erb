@@ -1,8 +1,12 @@
-<div class="container">
-  <h2>Ajouter une réservation</h2>
-    <%= simple_form_for [@tree, @booking] do |f| %>
-      <%= f.input :booked_at, label: "Du"%>
-      <%= f.input :booked_at, label: "Au"%>
-      <%= f.submit class: 'btn btn-primary' %>
-    <% end %>
+<div class="container" id="booking">
+  <div class="big-card">
+    <div class="booking-date">
+      <h2>Ajouter une réservation</h2>
+      <%= simple_form_for [@tree, @booking] do |f| %>
+        <%= f.input :booked_at, label: "Du"%>
+        <%= f.input :booked_at, label: "Au"%>
+        <%= f.submit class: 'btn-submit' %>
+      <% end %>
+      </div>
+    </div>
 </div>
