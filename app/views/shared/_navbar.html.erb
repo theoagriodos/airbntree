@@ -1,11 +1,12 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <%= link_to root_path do %>
-      <%= image_tag "https://source.unsplash.com/boE2xft0cAo/400x400", class: "avatar mr-3" %>
+      <img src="/assets/images/logo-airbntree.png" alt="logo airbntree" class="avatar mr-3"/>
+      <%#= image_tag "https://source.unsplash.com/boE2xft0cAo/400x400", class: "avatar mr-3" %>
     <% end %>
     <div class="container d-flex">
       <% if user_signed_in? %>
-        <%= link_to "My account", user_path(current_user), class: "mr-3 text-decoration-none text-secondary" %>
+        <%= link_to "Mon compte", user_path(current_user), class: "mr-3 text-decoration-none text-secondary" %>
       <% end %>
       <%= link_to "Nos Arbres", trees_path, class: "mr-3 text-decoration-none text-secondary" %>
     </div>

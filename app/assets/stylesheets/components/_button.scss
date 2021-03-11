@@ -1,6 +1,6 @@
 .btn-ghost {
-  color: white;
-  border: 1px solid white;
+  color: #f8f9fa;
+  border: 1px solid #f8f9fa;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
@@ -17,9 +17,39 @@
     }
 }
 
+.btn {
+  width: 220px;
+  text-align: center;
+  justify-content: center;
+  background-color: #865858;
+  // border: 1px solid #865858;
+  color: #f8f9fa;
+  font-size: 14px;
+  padding: 12px 18px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: none;
+  transition: opacity 0.3s ease;
+
+    &:hover {
+  background-color: #f8f9fa;
+  border: 1px solid #865858;
+  color: #865858;
+  text-decoration: none;
+  }
+}
+
+.btn-bottom {
+  position: absolute;
+  bottom: 30px;
+}
+
 .btn-submit {
+  width: 200px;
+  text-align: center;
+  justify-content: center;
   background-color: #BB968B;
-  color: white;
+  color: #f8f9fa;
   font-size: 16px;
   padding: 12px 18px;
   margin-top: 8px;
@@ -29,40 +59,40 @@
 
     &:hover {
   background-color: #b68973;
-  color: white;
+  color: #f8f9fa;
   text-decoration: none;
   }
 }
 
-.btn-light {
-  color: #4A4A4A;
-  border: 1px solid white;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
+// .btn-light {
+//   color: #4A4A4A;
+//   border: 1px solid white;
+//   padding: 8px 24px;
+//   border-radius: 50px;
+//   font-weight: lighter;
+//   opacity: 0.8;
+//   transition: opacity 0.3s ease;
+// }
 
-.btn-light:hover {
-  opacity: 1;
-  text-decoration: none;
-  background-color: #f8f9fa;
-}
+// .btn-light:hover {
+//   opacity: 1;
+//   text-decoration: none;
+//   background-color: #f8f9fa;
+// }
 
-.btn-reservation {
-  background-color: #9ecca4;
-  color: white;
-  padding: 12px 18px;
-  width: 200px;
-  height: 50px;
-  text-align: center;
-  border-radius: 8px;
-  transition: opacity 0.3s ease;
-}
+// .btn-reservation {
+//   background-color: #9ecca4;
+//   color: white;
+//   padding: 12px 18px;
+//   width: 200px;
+//   height: 50px;
+//   text-align: center;
+//   border-radius: 8px;
+//   transition: opacity 0.3s ease;
+// }
 
-.btn-reservation:hover {
-  background-color: #cee6b4;
-  color: white;
-  text-decoration: none;
-}
+// .btn-reservation:hover {
+//   background-color: #cee6b4;
+//   color: white;
+//   text-decoration: none;
+// }
