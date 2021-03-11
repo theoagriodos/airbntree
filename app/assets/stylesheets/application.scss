@@ -20,6 +20,7 @@
 @import "components/navbar";
 @import "components/_container";
 @import "components/_background_body";
+@import "components/_card_trees";
 
 //Typography
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
@@ -31,12 +32,22 @@ p {
 
 a:hover {
   text-decoration: none;
+  color: white;
 }
 
 .card-trip-infos {
   color: #6c757d;
 }
 
+
+a.card-category {
+ color: white;
+}
+
 .nav-link.active {
   border-bottom: 1px solid brown;
+}
+
+a  {
+ color: white;
 }
