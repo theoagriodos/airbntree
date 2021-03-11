@@ -12,7 +12,7 @@ class TreesController < ApplicationController
   end
 
   def create
-    @tree = Tree.find(tree_params)
+    @tree = Tree.new(tree_params)
     if @tree.save
       redirect_to tree_path(@tree)
     else
