@@ -32,9 +32,9 @@ class TreesController < ApplicationController
   end
 
   def destroy
-    @tree = current_user.trees
+    @tree = Tree.find(params[:id])
     @tree.destroy
-    redirect_to trees_path
+    redirect_to user_path(current_user)
   end
 
   private
