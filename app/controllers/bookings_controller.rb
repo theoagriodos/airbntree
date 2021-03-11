@@ -13,10 +13,14 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.status = "En attente"
     if @booking.save
-      redirect_to root_path(current_user)
+      redirect_to booking_path(current_user)
     else
       render :new
     end
+  end
+
+  def show
+    @my_trees = current_user.trees
   end
 
   def edit

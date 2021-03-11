@@ -24,11 +24,6 @@
   transition: opacity 0.3s ease;
 }
 
-.btn-submit:hover {
-  background-color: #cee6b4;
-  text-decoration: none;
-
-}
 
 .btn-light {
   color: #4A4A4A;
@@ -45,5 +40,11 @@
   opacity: 1;
   text-decoration: none;
   background-color: #f8f9fa;
+}
+
+.btn-submit:hover {
+  background-color: #cee6b4;
+  color: white;
+  text-decoration: none;
 }
 
