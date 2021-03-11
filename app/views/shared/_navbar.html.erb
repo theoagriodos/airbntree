@@ -1,25 +1,20 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <%= image_tag "https://source.unsplash.com/boE2xft0cAo/400x400", class: "avatar mr-3"%>
-            <div class="container d-flex">
-              <% if user_signed_in? %>
-              <%= link_to "My account", user_path(current_user), class: "mr-3 text-decoration-none text-secondary" %>
-                <% end %>
-
-              <%= link_to "Nos Arbres", trees_path, class: "mr-3 text-decoration-none text-secondary" %>
-              <%= link_to "Home", root_path, class: "text-decoration-none text-secondary" %>
-
-            </div>
-      </div>
-      <div class="d-flex text-right">
-        <% if user_signed_in? %>
-        <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "btn-ghost" %>
-        <% else %>
-        <%= link_to "Se connecter", new_user_session_path, class: "btn-ghost" %>
-        <% end %>
-      </div>
- </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <%= link_to root_path do %>
+      <%= image_tag "https://source.unsplash.com/boE2xft0cAo/400x400", class: "avatar mr-3" %>
+    <% end %>
+    <div class="container d-flex">
+      <% if user_signed_in? %>
+        <%= link_to "My account", user_path(current_user), class: "mr-3 text-decoration-none text-secondary" %>
+      <% end %>
+      <%= link_to "Nos Arbres", trees_path, class: "mr-3 text-decoration-none text-secondary" %>
+    </div>
+  </div>
+  <div class="d-flex text-right">
+    <% if user_signed_in? %>
+      <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "btn-ghost" %>
+    <% else %>
+      <%= link_to "Se connecter", new_user_session_path, class: "btn-ghost" %>
+    <% end %>
+  </div>
+</div>

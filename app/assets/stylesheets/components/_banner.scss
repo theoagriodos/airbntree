@@ -2,14 +2,16 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  height: 500px;
+  height: 860px;
+  position: relative;
+
 }
 
 .banner h1 {
   margin: 0;
-  color: white;
+  color: #B2B2B2;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 130px;
   font-weight: bold;
 }
 
@@ -18,4 +20,10 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+#app-name {
+position: absolute;
+left: 43px;
+bottom: 4px;
 }
