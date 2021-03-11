@@ -3,10 +3,10 @@
   <div class="tree-book-side">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#trees" role="tab" aria-controls="trees" aria-selected="true">trees</a>
+        <a class="nav-link active head" id="home-tab" data-toggle="tab" href="#trees" role="tab" aria-controls="trees" aria-selected="true">Mes arbres</a>
       </li>
       <li class="nav-item" role="presentation">
-        <a class="nav-link" id="resas-tab" data-toggle="tab" href="#resas" role="tab" aria-controls="resas" aria-selected="false">resas</a>
+        <a class="nav-link head" id="resas-tab" data-toggle="tab" href="#resas" role="tab" aria-controls="resas" aria-selected="false">Mes réservations</a>
       </li>
     </ul>
 
@@ -17,7 +17,7 @@
       <div class="tab-pane fade" id="resas" role="tabpanel" aria-labelledby="resas-tab">
         <%= render 'content_my_bookings', trees: @my_trees, bookings: @my_bookings %>
       </div>
-    </div>     
+    </div>
   </div>
 
 
@@ -25,7 +25,7 @@
   </div>
 
   <div class="user-side">
-    <p class="head-user">Mes informations</p>
+    <p class="head">Mes informations</p>
     <div class="card-show-user">
       <div class="avatar-user-show">
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", id: "avatar", alt: "avatar-large" %>
