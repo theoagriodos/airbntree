@@ -31,8 +31,13 @@ a:hover {
   color: #6c757d;
 }
 
+
 a.card-category {
  color: white;
+}
+
+.nav-link.active {
+  border-bottom: 1px solid blue;
 }
 
 a  {

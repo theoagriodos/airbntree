@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def show
     @my_trees = current_user.trees
-    @my_bookings = current_user.trees
+    @my_bookings = Booking.where('user_id=?', current_user)
 
     @bookings_to_be_validated = Booking.where(status: "pending").select do |booking|
       booking.tree.user == current_user

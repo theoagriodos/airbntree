@@ -1,0 +1,23 @@
+<div class="trees-of-user">
+  <% trees.each do |tree| %>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-tree-infos">
+        <h2> <%= tree.name %></h2>
+        <p> <%= tree.localisation %> </p>
+        <p> <strong><%= tree.price %></strong> </p>
+        <p> <%#= @my_booking.status %> </p>
+        <div class="link-to-tree">
+          <%= link_to edit_tree_path(tree) do %>
+            <i class="far fa-edit"></i>
+          <% end %>
+          <%= link_to tree_path(tree),
+          method: :delete,
+          data: { confirm: "Etes vous sûr ?" } do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
