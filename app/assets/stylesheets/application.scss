@@ -22,6 +22,14 @@
 @import "components/_background_body";
 @import "components/_card_trees";
 
+//Typography
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+}
+
 a:hover {
   text-decoration: none;
   color: white;
@@ -37,8 +45,13 @@ a.card-category {
 }
 
 .nav-link.active {
-  border-bottom: 1px solid blue;
+  border-bottom: 1px solid brown;
 }
+
+.nav-link.active, .nav-link {
+  border-top: none;
+  border-right: none;
+  border-left: none;
 
 a  {
  color: white;

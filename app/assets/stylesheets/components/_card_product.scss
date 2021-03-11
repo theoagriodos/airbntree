@@ -1,42 +1,10 @@
-// .lavalamp {
-//     position: relative;
-// }
+.nav-items {
 
-// .mb-2 {
-//   margin-bottom: 1.25rem !important;
-// }
+}
 
-// .nav-tabs {
-//   border-bottom: 1px solid #e5e5e5;
-// }
-
-// .nav {
-//   display: flex;
-//   flex-wrap: wrap;
-//   // padding-left: 0;
-//   // margin-bottom: 0;
-//   list-style: none;
-// }
-
-// ul, {
-//     margin-top: 0;
-//     margin-block-start: 1em;
-//     margin-block-end: 1em;
-//     margin-inline-start: 0px;
-//     margin-inline-end: 0px;
-//     padding-inline-start: 40px;
-// }
-
-// .nav-tabs .lavalamp-object {
-//     display: block;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     background: transparent;
-//     border-bottom: 2px solid #FD1015;
-//     border-radius: 0;
-// }
-
+.head {
+  margin-top: 16px;
+}
 
 .card-product {
   overflow: hidden;
@@ -46,13 +14,29 @@
   display: flex;
   align-items: center;
   border-radius: 16px;
-  margin-bottom: 16px;
+  margin-top: 16px;
   position: relative;
 }
 
-.link-to-tree {
+.link {
   position: absolute;
   top: 20px; right: 40px;
+}
+
+.fa-trash {
+  font-size: 16px;
+  color: #c7bbba;
+    &:hover{
+      color: #a16757;
+    }
+}
+
+.fa-edit {
+  font-size: 16px;
+  color: #c7bbba;
+    &:hover{
+      color: #a16757;
+    }
 }
 
 .card-product img {
