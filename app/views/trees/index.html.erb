@@ -1,12 +1,11 @@
+
 <div class="container">
-  <h1>Discover our trees</h1>
-  <ul class="list">
+  <h1>Découvrez nos Arbres</h1>
+</div>
+<div class="cards">
   <% @trees.each do |tree| %>
-    <li class="list-group-item">
-      <div class="cards">
-        <%= link_to tree.name, tree_path(tree) %>
-      </div>
-    </li>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dmaxwqv5g/image/upload/v1615391198/g9iaeq1fiwjmwknibmnz.jpg)">
+    <%= link_to tree.name, tree_path(tree) %>
+    </div>
   <% end %>
-  </ul>
 </div>

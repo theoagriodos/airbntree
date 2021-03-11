@@ -39,6 +39,6 @@ class TreesController < ApplicationController
   private
 
   def tree_params
-    params.require(:tree).permit(:name, :description, :localisation, :price)
+    params.require(:tree).permit(:name, :description, :localisation, :price, :photo)
   end
 end
