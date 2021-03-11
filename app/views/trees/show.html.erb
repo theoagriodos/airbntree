@@ -1,7 +1,7 @@
 <div class="container" id="grid-user">
 
   <div class="product">
-    <%= cl_image_tag @tree.photo, height: 300, width: 400, crop: :fill %>
+    <%= cl_image_tag @tree.photo.key, height: 300, width: 400, crop: :fill %>
     <h1><%= @tree.name %></h1>
     <p> <%= @tree.description %> </p>
     <p> <%= @tree.price %> </p>
