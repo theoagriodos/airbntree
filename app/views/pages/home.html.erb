@@ -1,18 +1,17 @@
-<div class="banner" style="background-image: url('https://source.unsplash.com/eyfMgGvo9PA/1600x900');">
-  <div class="container">
+<div class="banner" style="background-image: url(https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/6.2344,30.548,0.86,0/800x500?access_token=pk.eyJ1IjoiYmVuamFtaW5zaXJldCIsImEiOiJja2xjYTNjM3UxZnR1MnhuMGVucTQwbGIxIn0.yviR-zJMSQeCVNqInpBlEw)">
+  <div class="container" id="app-name">
     <h1>Airbntree</h1>
   </div>
 </div>
-
 <div class="container mt-5">
   <div>
     <h2>Découvrez nos arbres</h2>
   </div>
-  <div class="d-flex flex-wrap justify-content-between mt-5">
-    <% @trees.each do |tree| %>
+  <div class="d-flex justify-content-between mt-5">
+    <% @trees.first(3).each do |tree| %>
       <%= link_to tree_path(tree) do %>
         <div class="card-trip">
-        <img src="https://source.unsplash.com//yPSbirjJWzs/1600x900" />
+          <img src="https://source.unsplash.com//yPSbirjJWzs/1600x900" />
         <div class="card-trip-infos">
           <div>
             <h2><%= tree.name %></h2>
@@ -27,9 +26,8 @@
   </div>
 </div>
 <div class="container d-flex justify-content-center mt-5">
-  <%= link_to "Discover more", trees_path, class: "btn-ghost"%>
+  <%= link_to "Découvrez les tous", trees_path, class: "btn-ghost"%>
 </div>
-
 <div class="container mt-5">
   <div>
     <h2>Rejoignez-nous !</h2>
@@ -40,7 +38,6 @@
     </div>
   </div>
 </div>
-
 <div class="footer">
   <div class="footer-links">
     <a href="#"><i class="fab fa-github"></i></a>
@@ -49,9 +46,7 @@
     <a href="#"><i class="fab fa-twitter"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
-
   <div class="footer-copyright">
     This footer is made with <i class="fas fa-heart"></i> at Le Wagon
   </div>
-
 </div>
