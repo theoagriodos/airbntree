@@ -1,2 +1,3 @@
-<h2><%= tree.name  %> </h2>
-<p><%= tree.user.username %></p>
+<h2><%= link_to tree.name, tree_path(tree), class: "link"%></h2>
+<p><%= tree.description %></p>
+<p><%= tree.price %></p>

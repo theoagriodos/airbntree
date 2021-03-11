@@ -13,6 +13,7 @@ class TreesController < ApplicationController
 
   def create
     @tree = Tree.new(tree_params)
+    @tree.user = current_user
     if @tree.save
       redirect_to tree_path(@tree)
     else

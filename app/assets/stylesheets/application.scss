@@ -32,7 +32,6 @@ p {
 
 a:hover {
   text-decoration: none;
-  color: white;
 }
 
 .card-trip-infos {
@@ -48,6 +47,7 @@ a.card-category {
   border-bottom: 1px solid brown;
 }
 
-a  {
- color: white;
+.link {
+  color: black;
+  text-decoration: none;
 }
