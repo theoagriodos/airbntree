@@ -1,15 +1,20 @@
-<div class="container">
-  <h1><%= @tree.name %></h1>
-    <%= link_to "Retour à notre sélection", trees_path %>
+<div class="container" id="grid-user">
 
   <div class="product">
+    <%= cl_image_tag @tree.photo, height: 300, width: 400, crop: :fill %>
+    <h1><%= @tree.name %></h1>
     <p> <%= @tree.description %> </p>
     <p> <%= @tree.price %> </p>
     <p> <%= @tree.localisation %> </p>
+
+    <div class="btn-reservation">
+      <%= link_to 'Réserver cet arbre', new_tree_booking_path(@tree)%>
+    </div>
+    <%= link_to "Retour à notre sélection", trees_path %>
   </div>
 
-  <div class="btn-reservation">
-    <%= link_to 'Réserver cet arbre', new_tree_booking_path(@tree)%>
-  </div>
+  <div></div>
+
+  <div>map</div>
 
 </div>

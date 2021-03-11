@@ -12,7 +12,7 @@ class TreesController < ApplicationController
   end
 
   def create
-    @tree = Tree.find(tree_params)
+    @tree = Tree.new(tree_params)
     if @tree.save
       redirect_to tree_path(@tree)
     else
@@ -39,6 +39,6 @@ class TreesController < ApplicationController
   private
 
   def tree_params
-    params.require(:tree).permit(:name, :description, :localisation, :price)
+    params.require(:tree).permit(:name, :description, :localisation, :price, :photo)
   end
 end

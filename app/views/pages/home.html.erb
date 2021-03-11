@@ -1,7 +1,7 @@
-<div class="banner" style="background-image: url(https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/6.2344,30.548,0.86,0/800x500?access_token=pk.eyJ1IjoiYmVuamFtaW5zaXJldCIsImEiOiJja2xjYTNjM3UxZnR1MnhuMGVucTQwbGIxIn0.yviR-zJMSQeCVNqInpBlEw)">
-  <div class="container" id="app-name">
-    <h1>Airbntree</h1>
-  </div>
+<div id="map"
+  style="width: 100%; height: 720px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 <div class="container mt-5">
   <div>
@@ -50,3 +50,4 @@
     This footer is made with <i class="fas fa-heart"></i> at Le Wagon
   </div>
 </div>
+
