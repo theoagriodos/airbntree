@@ -1,22 +1,30 @@
 <div class="container" id="grid-user">
 
-  <div class="product">
-    <%= cl_image_tag @tree.photo.key, height: 300, width: 400, crop: :fill %>
-    <h1><%= @tree.name %></h1>
-    <p> <%= @tree.description %> </p>
-    <p> <%= @tree.price %> </p>
-    <p> <%= @tree.localisation %> </p>
+  <div>
+    <div class="product">
+      <%= cl_image_tag @tree.photo.key, height: 300, width: 400, crop: :fill %>
+      <h3><%= @tree.name %></h3>
+      <p> <%= @tree.description %> </p>
+      <p> <strong><%= @tree.price %>€</strong></p>
+      <p> <%= @tree.localisation %> </p>
 
-    <div class="btn-reservation">
-      <%= link_to 'Réserver cet arbre', new_tree_booking_path(@tree)%>
+      <div class="btn-submit">
+        <%= link_to 'Réserver cet arbre', new_tree_booking_path(@tree)%>
+      </div>
     </div>
-    <%= link_to "Retour à notre sélection", trees_path %>
+
+    <div>
+      <%= link_to trees_path do %>
+        <i class="fas fa-arrow-left"></i>
+      <% end %>
+    </div>
   </div>
 
   <div></div>
 
- <div id="map"
-     style="width: 150%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  <div id="map"
+      style="width: 150%; height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
