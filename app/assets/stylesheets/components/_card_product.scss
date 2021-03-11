@@ -25,6 +25,11 @@
   top: 20px; right: 40px;
 }
 
+.right {
+  position: absolute;
+  top: 70px; right: 40px;
+}
+
 .fa-trash {
   font-size: 16px;
   color: #c7bbba;
@@ -64,4 +69,8 @@
 
 .card-product .card-tree-infos {
   padding: 16px;
+}
+
+.card-product .card-booking-infos {
+   padding: 16px;
 }

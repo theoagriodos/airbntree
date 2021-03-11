@@ -6,7 +6,7 @@
         <h2> <%= tree.name %></h2>
         <p> <%= tree.localisation %> </p>
         <p> <strong><%= tree.price %></strong> </p>
-        <p> <%#= @my_booking.status %> </p>
+        <p> <%#= tree.booking.status %> </p>
         <div class="link">
           <%= link_to edit_tree_path(tree) do %>
             <i class="far fa-edit"></i>
