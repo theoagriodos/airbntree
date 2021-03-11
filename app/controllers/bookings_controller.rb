@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.status = "En attente"
     if @booking.save
-      redirect_to booking_path(current_user)
+      redirect_to user_path(current_user)
     else
       render :new
     end
@@ -33,7 +33,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
-    redirect_to bookings_path
+    redirect_to user_path(current_user)
   end
 
 private
