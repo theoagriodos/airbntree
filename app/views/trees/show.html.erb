@@ -8,7 +8,11 @@
       <p> <%= @tree.localisation %> </p>
 
       <div class="btn-submit">
-        <%= link_to 'Réserver cet arbre', new_tree_booking_path(@tree)%>
+        <% if @current_user.nil? %>
+        <%= link_to "Réserver cet arbre", new_user_session_path %>
+        <% else %>
+        <%= link_to "Réserver cet arbre", new_tree_booking_path(@tree) %>
+        <% end %>
       </div>
     </div>
 

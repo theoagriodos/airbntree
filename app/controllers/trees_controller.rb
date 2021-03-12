@@ -4,7 +4,7 @@ class TreesController < ApplicationController
   end
 
   def show
-
+    @current_user = current_user
     @tree = Tree.find(params[:id])
     @markers = [{
         lat: @tree.latitude,
