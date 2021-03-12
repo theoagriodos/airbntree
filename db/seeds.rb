@@ -50,7 +50,7 @@ url = "https://images.pexels.com/photos/1978126/pexels-photo-1978126.jpeg?auto=c
 sapin.photo.attach(io: URI.open(url), filename: 'sapin.jpg')
 sapin.save!
 
-sequoia = Tree.create!(
+sequoia = Tree.new(
   name: "Sequoia",
   localisation: "USA",
   description: "Arbre géant d'Amérique du Nord",
@@ -62,8 +62,8 @@ url = "https://images.pexels.com/photos/2847282/pexels-photo-2847282.jpeg?auto=c
 sequoia.photo.attach(io: URI.open(url), filename: 'sequoia.jpg')
 sequoia.save!
 
-cerisier = Tree.create!(
-  name: "cerisier",
+cerisier = Tree.new(
+  name: "Cerisier",
   localisation: "Japon",
   description: "Konichiwa 🍥",
   price: "100€",
@@ -74,6 +74,29 @@ url = "https://images.pexels.com/photos/5220030/pexels-photo-5220030.jpeg?auto=c
 cerisier.photo.attach(io: URI.open(url), filename: 'cerisier.jpg')
 cerisier.save!
 
+olivier = Tree.new(
+  name: "Olivier",
+  localisation: "Tunisie",
+  description: "Fabriquez votre couronne en rameaux",
+  price: "99€",
+  user: theo
+  )
+
+url = "https://images.unsplash.com/photo-1562530113-eca799a03932?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+olivier.photo.attach(io: URI.open(url), filename: 'olivier.jpg')
+olivier.save!
+
+palmier = Tree.new(
+  name: "Palmier",
+  localisation: "Martinique",
+  description: "Sea sex and sun !",
+  price: "250€",
+  user: theo
+  )
+
+url = "https://images.unsplash.com/photo-1541003571006-029c2613f694?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+palmier.photo.attach(io: URI.open(url), filename: 'palmier.jpg')
+palmier.save!
 
 Booking.create!(
   booked_at: "2021-10-10",

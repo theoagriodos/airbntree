@@ -7,10 +7,10 @@ class TreesController < ApplicationController
     @current_user = current_user
     @tree = Tree.find(params[:id])
     @markers = [{
-        lat: @tree.latitude,
-        lng: @tree.longitude
-      }]
-
+      lat: @tree.latitude,
+      lng: @tree.longitude,
+      infoWindow: render_to_string(partial: "tree_info_window", locals: { tree: @tree })
+    }]
   end
 
   def new
