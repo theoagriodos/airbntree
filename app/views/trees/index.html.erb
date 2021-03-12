@@ -1,11 +1,31 @@
 
 <div class="container">
   <h2>Découvrez nos Arbres</h2>
-</div>
-<div class="cards">
+
+<!-- <div class="cards">
   <% @trees.each do |tree| %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dmaxwqv5g/image/upload/v1615391198/g9iaeq1fiwjmwknibmnz.jpg)">
-    <%= link_to tree.name, tree_path(tree) %>
+    <%#= link_to tree.name, tree_path(tree) %>
     </div>
   <% end %>
+</div> -->
+
+  <div class="d-flex">
+  <%# <div class="d-flex justify-content-between mt-5"> %>
+    <% @trees.each do |tree| %>
+      <%= link_to tree_path(tree) do %>
+        <div class="card-trip">
+         <%= cl_image_tag tree.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="card-trip-infos">
+          <div>
+            <h3><%= tree.name %></h2>
+            <p><%= tree.description %></p>
+          </div>
+          <p class="card-trip-pricing"><strong><%= tree.price %>€</strong></p>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>

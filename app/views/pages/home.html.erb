@@ -11,7 +11,7 @@
     <% @trees.first(3).each do |tree| %>
       <%= link_to tree_path(tree) do %>
         <div class="card-trip">
-          <img src="https://source.unsplash.com//yPSbirjJWzs/1600x900" />
+         <%= cl_image_tag tree.photo.key, height: 300, width: 400, crop: :fill %>
         <div class="card-trip-infos">
           <div>
             <h3><%= tree.name %></h2>
