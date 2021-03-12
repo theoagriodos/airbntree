@@ -1,7 +1,7 @@
 <div class="trees-of-user">
   <% trees.each do |tree| %>
     <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <%= cl_image_tag tree.photo.key, height: 300, width: 400, crop: :fill %>
       <div class="card-tree-infos">
         <h2> <%= tree.name %></h2>
         <p> <%= tree.localisation %> </p>
