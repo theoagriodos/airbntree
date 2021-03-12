@@ -13,13 +13,13 @@ User.destroy_all
 Tree.destroy_all
 
 theo = User.create!(
-  username: "theo",
+  username: "Jim Lafeuille",
   email: 'test@test.fr',
   password: 'azerty'
   )
 
 benjamin = User.create!(
-  username: "benjamin",
+  username: "Benjamin Siret",
   email: 'test1@test.fr',
   password: 'azerty'
   )
@@ -29,12 +29,12 @@ benjamin = User.create!(
 baobab = Tree.new(
   name: "Baobab",
   localisation: "Afrique",
-  description: "blablabla",
+  description: "Majesteux et imposant",
   price: "70€",
-  user: benjamin
+  user: theo
   )
 
-url = "https://images.unsplash.com/photo-1458966480358-a0ac42de0a7a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80"
+url = "https://images.unsplash.com/photo-1558694440-03ade9215d7b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
 baobab.photo.attach(io: URI.open(url), filename: 'baobab.jpg')
 baobab.save!
 
@@ -46,17 +46,34 @@ sapin = Tree.new(
   user: benjamin
   )
 
-url = "https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1955&q=80"
+url = "https://images.pexels.com/photos/1978126/pexels-photo-1978126.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
 sapin.photo.attach(io: URI.open(url), filename: 'sapin.jpg')
 sapin.save!
 
-# sequoia = Tree.create!(
-#   name: "Sequoia",
-#   localisation: "USA",
-#   description: "arbre géant d'Amérique du Nord",
-#   price: "60€",
-#   user: theo
-#   )
+sequoia = Tree.create!(
+  name: "Sequoia",
+  localisation: "USA",
+  description: "Arbre géant d'Amérique du Nord",
+  price: "60€",
+  user: theo
+  )
+
+url = "https://images.pexels.com/photos/2847282/pexels-photo-2847282.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+sequoia.photo.attach(io: URI.open(url), filename: 'sequoia.jpg')
+sequoia.save!
+
+cerisier = Tree.create!(
+  name: "cerisier",
+  localisation: "Japon",
+  description: "Konichiwa 🍥",
+  price: "100€",
+  user: theo
+  )
+
+url = "https://images.pexels.com/photos/5220030/pexels-photo-5220030.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+cerisier.photo.attach(io: URI.open(url), filename: 'cerisier.jpg')
+cerisier.save!
+
 
 Booking.create!(
   booked_at: "2021-10-10",
