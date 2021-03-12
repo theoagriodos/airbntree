@@ -4,7 +4,13 @@ class TreesController < ApplicationController
   end
 
   def show
+
     @tree = Tree.find(params[:id])
+    @markers = [{
+        lat: @tree.latitude,
+        lng: @tree.longitude
+      }]
+
   end
 
   def new
