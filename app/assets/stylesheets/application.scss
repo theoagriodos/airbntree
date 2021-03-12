@@ -23,6 +23,7 @@
 @import "components/_card_trees";
 
 //Typographies
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
@@ -30,23 +31,24 @@
 
 h2 {
   font-family: 'Montserrat', sans-serif;
-  font-style: 600;
+  font-weight: 600;
   font-size: 24px;
   color: #3d5951;
 }
 
 h3 {
   font-family: 'Montserrat', sans-serif;
-  font-style: 500;
+  font-weight: 500;
   font-size: 18px;
   color: #BB968B;
 }
 
 p {
-  font-family: 'Montserrat', sans-serif;
-  font-style: 400;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   font-size: 16px;
 }
+
 
 a:hover {
   text-decoration: none;
@@ -59,10 +61,6 @@ a:hover {
 
 a.card-category {
  color: white;
-}
-
-.nav-link.active {
-  border-bottom: 1px solid brown;
 }
 
 .link {
