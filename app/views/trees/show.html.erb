@@ -1,32 +1,49 @@
-<div class="container" id="grid-user">
-  <div>
-    <div class="product">
-      <%= cl_image_tag @tree.photo.key, height: 300, width: 400, crop: :fill %>
-      <h3><%= @tree.name %></h3>
+<div>
+  <div class="d-flex justify-content-between">
+    <div class="margin-left">
+      <div>
+        <%= cl_image_tag @tree.photo.key, height: 300, width: 400, crop: :fill, class: 'img'%>
+      </div>
+      <div class="d-flex mr-2">
+        <h3><%= @tree.name %></h3>
+        <p id='price'> <strong><%= @tree.price %></strong></p>
+      </div>
+      <p> <i class="fas fa-map-marker-alt"></i><%= @tree.localisation %> </p>
       <p> <%= @tree.description %> </p>
-      <p> <strong><%= @tree.price %></strong></p>
-      <p> <%= @tree.localisation %> </p>
 
-      <div class="btn-submit">
+      <div class="btn">
         <% if @current_user.nil? %>
         <%= link_to "Réserver cet arbre", new_user_session_path %>
         <% else %>
         <%= link_to "Réserver cet arbre", new_tree_booking_path(@tree) %>
         <% end %>
       </div>
+
+      <div class="d-flex">
+        <%= link_to trees_path do %>
+          <i class="fas fa-arrow-left"><p>Retour</p></i>
+        <% end %>
+      </div>
     </div>
 
-    <div>
-      <%= link_to trees_path do %>
-        <i class="fas fa-arrow-left"></i>
-      <% end %>
-    </div>
-  </div>
-  <div></div>
 
-  <div id="map"
-      style="width: 150%; height: 100vh;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    <div id="map"
+        style="width: 48%; height: 100vh;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 </div>
+
+<%# <div class="footer">
+<div class="footer-links">
+  <a href="#"><i class="fab fa-github"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-facebook"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-linkedin"></i></a>
+</div>
+<div class="footer-copyright">
+  Ce footer est fait avec <i class="fas fa-heart"></i> par Théo, Benjamin et Morgane
+</div> %>
+
