@@ -20,3 +20,10 @@
   position: absolute;
   top: 40px; right: 40px;
 }
+
+.nav-link.tn {
+  color: #3d5951;
+  &:hover {
+    color: #865858;
+  }
+}
