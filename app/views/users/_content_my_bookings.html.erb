@@ -1,7 +1,7 @@
 <div class="bookings-of-user">
   <% bookings.each do |booking| %>
     <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <%= cl_image_tag booking.tree.photo.key, height: 300, width: 400, crop: :fill %>
       <div class="card-booking-infos">
         <h2> <%= booking.tree.name %></h2>
         <p> <%= booking.tree.localisation %> </p>
