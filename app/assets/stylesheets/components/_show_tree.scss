@@ -1,0 +1,38 @@
+.margin-left {
+  margin-left: 27px;
+  margin-top: 16px;
+}
+
+.img {
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.fa-arrow-left {
+  margin-top: 40px;
+  margin-right: 16px;
+  font-size: 16px;
+  color: lightgray;
+  &:hover {
+    color: #865858;
+  }
+}
+
+.fa-map-marker-alt {
+  color: lightgray;
+  margin-right: 16px;
+}
+
+#price {
+  margin-left: 16px;
+  color: #BB968B;
+  font-size: 16px;
+}
+
+a {
+  color: white;
+
+  &:hover{
+    color:#865858;
+  }
+}

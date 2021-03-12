@@ -13,19 +13,19 @@
       <%= link_to tree_path(tree) do %>
         <div class="card-trip">
          <%= cl_image_tag tree.photo.key, height: 300, width: 400, crop: :fill %>
-        <div class="card-trip-infos">
-          <div>
-            <h3><%= tree.name %></h2>
-            <p><%= tree.description %></p>
+          <div class="card-trip-infos">
+            <div>
+              <h3><%= tree.name %></h2>
+              <p><%= tree.description %></p>
+            </div>
+            <p class="card-trip-pricing"><strong><%= tree.price %></strong></p>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
           </div>
-          <p class="card-trip-pricing"><strong><%= tree.price %>€</strong></p>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
         </div>
-      </div>
       <% end %>
     <% end %>
   </div>
-</div>
+
 <div class="container d-flex justify-content-center mt-5">
   <%= link_to "Découvrez nos arbres", trees_path, class: "btn"%>
 </div>
@@ -44,6 +44,7 @@
       <% end %>
     </div>
   </div>
+</div>
 </div>
 
 <div class="footer">
