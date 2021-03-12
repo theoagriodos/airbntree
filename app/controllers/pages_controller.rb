@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @current_user = current_user
     @trees = Tree.all
     @markers = @trees.geocoded.map do |tree|
       {
